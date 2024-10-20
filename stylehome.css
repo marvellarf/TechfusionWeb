@@ -1,0 +1,248 @@
+:root {
+    --color1: #190019;
+    --color2: #2B124C;
+    --color3: #522B5B;
+    --color4: #854F6C;
+    --color5: #DFB6B2;
+    --color6: #FBE4D8;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color1);
+    color: var(--color6);
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--color2);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    animation: fadeIn 2s ease-in-out;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--color6);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+ul li a {
+    color: var(--color6);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+ul li a:hover {
+    color: var(--color5);
+}
+
+/* Burger Menu */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color6);
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: var(--color2);
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.burger-menu a {
+    padding: 0.5rem;
+    color: var(--color6);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.burger-menu a:hover {
+    color: var(--color5);
+}
+
+/* Banner Styles */
+.banner {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 300px; 
+    position: relative;
+}
+
+.banner-container {
+    display: flex; /* Membuat semua gambar sejajar */
+    animation: slide 20s infinite; /* Animasi slide */
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan gambar mengisi bingkai dengan proporsi yang benar */
+}
+
+/* Animasi Slide */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-100%); }
+    95% { transform: translateX(0); }
+    100% { transform: translateX(0); }
+}
+
+/* Background Scroll Animation */
+.parallax {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    transition: background-position 0.5s ease-in-out; /* Animasi ketika scroll */
+}
+
+#background1 {
+    background-image: url('backround_files/background 1.gif');
+    background-attachment: fixed;
+}
+
+#background2 {
+    background-image: url('backround_files/background 2.gif');
+    background-attachment: fixed;
+}
+
+.scrolled #background1 {
+    background-position: 0% 100%;
+}
+
+.scrolled #background2 {
+    background-position: 0% 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    ul {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .banner {
+        flex-direction: column; 
+    }
+}
+
+/* Animasi Fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+section {
+    padding: 2rem;
+    text-align: justify;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--color2);
+    color: var(--color6);
+}
+
+/* Menu Icons Styles */
+.menu-icons {
+    display: flex;
+    justify-content: space-around; /* Mengatur ruang antar ikon */
+    align-items: center; /* Rata tengah secara vertikal */
+    position: relative; /* Posisi relatif untuk efek overlay */
+    margin: -60px 5% 1rem; /* Jarak atas lebih jauh dari 'Selamat Datang' */
+    z-index: 1; /* Pastikan di atas gambar latar */
+}
+
+.icon-item {
+    text-align: center;
+    flex: 1; /* Membagi ruang secara merata antar ikon */
+    margin: 0 10px; /* margin horizontal */
+}
+
+.icon-frame {
+    width: 200px; /* Ukuran bingkai tetap */
+    height: 200px; /* Ukuran bingkai tetap */
+    overflow: hidden; /* Menghilangkan gambar yang melampaui bingkai */
+    position: relative; /* efek zoom */
+    transition: transform 0.3s ease; /* Efek zoom pada bingkai */
+    display: flex; /*flexbox */
+    align-items: center; /* Pusatkan konten secara vertikal */
+    justify-content: center; /* Pusatkan konten secara horizontal */
+}
+
+.icon-frame img {
+    max-width: 100%; /* Mengisi bingkai */
+    max-height: 100%; /* Menjaga proporsi gambar */
+    transition: transform 0.3s ease; /* Transisi pada gambar */
+}
+
+.icon-frame:hover img {
+    transform: scale(1.2); /* Efek zoom pada gambar saat hover */
+}
+
+.icon-item:hover .icon-frame {
+    transform: scale(1.05); /* Zoom bingkai sedikit saat hover */
+}
+
+.icon-item p {
+    margin-top: 10px; /* Jarak antara ikon dan teks */
+    font-size: 1.2rem; /* Ukuran font teks */
+    text-align: center; 
+}
+
+.burger-menu.active {
+    display: flex;
+}

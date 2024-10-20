@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Produk Laptop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #3c1649;
+        }
+
+        header {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #630368;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .product {
+            display: flex;
+            align-items: center;
+            background-color: #f1a3fb;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product img {
+            max-width: 200px;
+            margin-right: 20px;
+            border-radius: 10px;
+        }
+
+        .product h2, .product h3 {
+            font-size: 24px;
+            margin: 0 0 10px;
+        }
+
+        .product p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .product .price {
+            font-weight: bold;
+            color: #e67e22;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Daftar Laptop Tersedia</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Beranda</a></li>
+            <li><a href="Produk.html">Produk</a></li>
+            <li><a href="berita.html">Berita</a></li>
+            <li><a href="layanan.html">Layanan</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="product">
+            <img src="https://drive.google.com/thumbnail?id=1hprzKFPd9GyJ4KFmed2PsBBlM9dJI5j-" alt="Laptop 1">
+            <div>
+                <h2>Dell XPS 15</h2>
+                <p>Spesifikasi:The Dell XPS 15 is designed for high-performance tasks, equipped with a powerful Intel Core i7 processor, 16GB RAM, and 512GB SSD.</p>
+                <p class="price">Harga: Rp 18.000.000</p>
+                <button>Beli Sekarang</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="https://drive.google.com/thumbnail?id=1cSCa893bskvLBIS9Cnbz6edRJmqC3I_-" alt="Laptop 2">
+            <div>
+                <h3>Lenovo ThinkPad X1</h3>
+                <p>Spesifikasi: Intel Core i7, 16GB RAM, 1TB SSD</p>
+                <p class="price">Harga: Rp 22.000.000</p>
+                <button>Beli Sekarang</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="https://drive.google.com/thumbnail?id=1p5ZMwVQe6x_msMOQQaYmt7rpVYmZ_UMY" alt="Asus ROG Zephyrus">
+            <div>
+                <h4>Asus ROG Zephyrus</h4>
+                <p>Spesifikasi: AMD Ryzen 9, 32GB RAM, 1TB SSD</p>
+                <p class="price">Harga: Rp 25.000.000</p>
+                <button>Beli Sekarang</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="https://drive.google.com/thumbnail?id=1G-SM5sCka8k3R7rVCok6QTKOXR_fIvSM" alt="Acer Aspire 5">
+            <div>
+                <h5>Acer Aspire 5</h5>
+                <p>Spesifikasi: Intel Core i5, 8GB RAM, 512GB SSD</p>
+                <p class="price">Harga: Rp 8.000.000</p>
+                <button>Beli Sekarang</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="https://drive.google.com/thumbnail?id=11XvcstbgFbWiBiOS2WkotVgd0wFS9Kp2" alt="Lenovo IdeaPad Slim 3i">
+            <div>
+                <h6>Lenovo IdeaPad Slim 3i</h6>
+                <p>Spesifikasi: Intel Core i3, 4GB RAM, 256GB SSD</p>
+                <p class="price">Harga: Rp 7.000.000</p>
+                <button>Beli Sekarang</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="https://drive.google.com/thumbnail?id=1A9tG_NNuHDaV0IbAX6_qihuzqwUUQLQ4" alt="HP Pavilion 14">
+            <div>
+                <h7>HP Pavilion 14</h7>
+                <p>Spesifikasi: Intel Core i5, 8GB RAM, 512GB SSD</p>
+                <p class="price">Harga: Rp 9.000.000</p>
+                <button>Beli Sekarang</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 TechFusion. Semua hak dilindungi.</p>
+    </footer>
+</body>
+</html>
